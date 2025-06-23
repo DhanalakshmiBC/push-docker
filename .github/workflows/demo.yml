@@ -1,7 +1,7 @@
 name: own-deepu
 on: push
 env:
-    Node_Version: 18
+    Node_Version: '18'
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -9,7 +9,7 @@ jobs:
         - uses: actions/checkout@v4
         
         - name: set up nodejs
-          uses: actions/set-up-node@v4
+          uses: actions/setup-node@v4
           with:
             version: ${{env.Node_Version}}
             cache: npm
